@@ -1,10 +1,12 @@
 import React from 'react';
-import Header from '../../components/Header/Header';
+import Therapies from '../Therapies/Therapies';
+import Slider from './Slider/Slider';
 
 const Home = () => {
     return (
         <div>
-            <Header></Header>
+            <Slider></Slider>
+            <Therapies></Therapies>
         </div>
     );
 };

@@ -1,0 +1,20 @@
+.therapy-img {
+  border: 2px solid gray;
+  border-radius: 10px 25% 10px 25%;
+  transition: transform 0.3s ease-in-out;
+}
+.therapy {
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(246, 222, 170, 1) 0%,
+    rgba(255, 244, 186, 1) 35%
+  );
+  border-radius: 10px 25% 10px 10px;
+  transition: box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+.therapy:hover > .therapy-img {
+  transform: scale(1.05);
+}
