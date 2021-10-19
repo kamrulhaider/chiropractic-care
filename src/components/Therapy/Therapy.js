@@ -7,6 +7,7 @@ const Therapy = (props) => {
 
     // using destructuring
     const { key, img, name, details } = props.therapy;
+
     return (
         <div>
             <Col>
@@ -23,6 +24,7 @@ const Therapy = (props) => {
                     </Card.Body>
                 </Card>
             </Col>
+
         </div >
     );
 };
