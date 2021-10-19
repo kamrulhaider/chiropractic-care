@@ -1,0 +1,11 @@
+.newsletter {
+  height: 450px;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgb(226, 195, 163) 0%,
+    rgb(219, 210, 170) 35%
+  );
+  border-radius: 25px;
+}

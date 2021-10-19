@@ -6,7 +6,7 @@ import slider3 from '../../../images/slider-3.jpg';
 
 const Slider = () => {
     return (
-        <div className="container-fluid">
+        <div className="container-fluid mt-3">
             <Carousel>
                 {/* slider item */}
                 <Carousel.Item>

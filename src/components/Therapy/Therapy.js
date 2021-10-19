@@ -15,7 +15,7 @@ const Therapy = (props) => {
                     <Card.Body className="therapy-body">
                         <Card.Title>{name}</Card.Title>
                         <Card.Text>
-                            <p>{details.slice(0, 200)}...</p>
+                            {details.slice(0, 200)}...
                         </Card.Text>
                         <Link to={`/details/${key}`}>
                             <button className="btn btn-outline-dark">More Details</button>

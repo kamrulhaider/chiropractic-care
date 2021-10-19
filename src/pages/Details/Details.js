@@ -1,5 +1,4 @@
 import React from 'react';
-import useTherapies from '../../hooks/useTherapies';
 import { useParams } from 'react-router';
 
 const Details = () => {
