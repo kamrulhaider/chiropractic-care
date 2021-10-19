@@ -2,7 +2,6 @@ import React from 'react';
 import { useParams } from 'react-router';
 
 const Details = () => {
-
     // parameter
     const { therapyId } = useParams();
 

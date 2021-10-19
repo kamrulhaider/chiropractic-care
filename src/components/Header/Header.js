@@ -11,17 +11,17 @@ const Header = () => {
         <div>
             <Navbar bg="dark" variant="dark" expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home" className="fw-bold">Chiropractic Care</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/" className="fw-bold">Chiropractic Care</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
                             <Link className="nav-link" to="/">Home</Link>
                             <Link className="nav-link" to="/therapies">Therapies</Link>
-                            <Nav.Link href="#link">Doctors</Nav.Link>
-                            <Nav.Link href="#link">About Us</Nav.Link>
-                            <Nav.Link href="#link">{user?.displayName}</Nav.Link>
+                            <Nav.Link as={Link} to="/doctors">Doctors</Nav.Link>
+                            <Nav.Link as={Link} to="/about">About Us</Nav.Link>
+                            <Navbar.Text className="text-info">{user?.displayName}</Navbar.Text>
                             {user?.email ?
-                                <button onClick={logOut} className="btn btn-outline-danger">Logout</button> :
+                                <button onClick={logOut} className="btn btn-outline-danger ms-3">Logout</button> :
                                 <Nav.Link as={Link} to="/login">Login</Nav.Link>
                             }
                         </Nav>

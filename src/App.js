@@ -10,6 +10,8 @@ import Footer from './components/Footer/Footer';
 import Login from './pages/Login/Firebase/Login/Login';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './pages/Login/Firebase/Login/PrivateRoute/PrivateRoute';
+import Doctors from './pages/Doctors/Doctors';
+import About from './pages/About/About';
 
 
 function App() {
@@ -28,6 +30,12 @@ function App() {
             </Route>
             <PrivateRoute path="/details/:therapyId">
               <Details></Details>
+            </PrivateRoute>
+            <PrivateRoute path="/doctors">
+              <Doctors></Doctors>
+            </PrivateRoute>
+            <PrivateRoute path="/about">
+              <About></About>
             </PrivateRoute>
             <Route path="/login">
               <Login></Login>

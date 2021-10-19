@@ -105,7 +105,7 @@ const useFirebase = () => {
             .then(result => { })
     }
 
-    // statechage observer
+    // statechange observer
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, user => {
             if (user) {
