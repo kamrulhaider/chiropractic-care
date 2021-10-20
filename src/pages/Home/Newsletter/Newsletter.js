@@ -1,5 +1,4 @@
 import React from 'react';
-import { FormControl, InputGroup } from 'react-bootstrap';
 import './Newsletter.css';
 
 const Newsletter = () => {

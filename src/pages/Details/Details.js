@@ -3,6 +3,8 @@ import { Card } from 'react-bootstrap';
 import { useParams } from 'react-router';
 
 const Details = () => {
+
+    // data 
     const totalData = [{
         "key": 101,
         "name": "Therapeutic Exercise",
@@ -60,11 +62,10 @@ const Details = () => {
     }]
 
 
-    // parameter
+
     const { therapyId } = useParams();
 
     const singleItem = totalData.find(element => element.key === parseInt(therapyId));
-    console.log(singleItem)
 
     return (
         <div className="container p-5">

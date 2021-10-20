@@ -13,7 +13,7 @@ const Login = () => {
                     <h3 className="text-center mb-3 fw-bold">Please {isLogin ? 'Login' : 'Register'}</h3>
                     {!isLogin && <div className="mb-3">
                         <label htmlFor="inputName" className="col-sm-2 col-form-label">Name</label>
-                        <input type="text" onBlur={handleNameChange} className="form-control" id="inputName" placeholder="Your Name" />
+                        <input type="text" onBlur={handleNameChange} className="form-control" id="inputName" />
                     </div>}
                     <div className="mb-3">
                         <label className="form-label">Email address</label>
@@ -22,6 +22,7 @@ const Login = () => {
                     <div className="mb-3">
                         <label className="form-label">Password</label>
                         <input onBlur={handlePasswordChange} type="password" className="form-control" />
+                        <p>Password Must contain two uppercase or at least one lowercase</p>
                     </div>
                     <div className="form-check">
                         <input onChange={toggleLogin} className="form-check-input" type="checkbox" id="gridCheck1" />

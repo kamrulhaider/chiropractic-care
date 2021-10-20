@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel, Row } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 import slider1 from '../../../images/slider-1.jpg';
 import slider2 from '../../../images/slider-2.jpg';
 import slider3 from '../../../images/slider-3.jpg';

@@ -15,6 +15,7 @@ const useFirebase = () => {
 
     const auth = getAuth();
 
+    // Google sign in system 
     const signInUsingGoogle = () => {
 
         setIsLoading(true);
@@ -26,6 +27,8 @@ const useFirebase = () => {
             })
             .finally(() => setIsLoading(false));
     }
+
+    // email pass login 
     const toggleLogin = e => {
         setIsLogin(e.target.checked)
     }
@@ -43,13 +46,12 @@ const useFirebase = () => {
 
     const handleRegistration = e => {
         e.preventDefault();
-        console.log(email, password);
         if (password.length < 6) {
             setError('Password Must be at least 6 characters long.')
             return;
         }
-        if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
-            setError('Password Must contain 2 upper case');
+        if (!/(?=.*[A-Z].*[A-Z]).*[a-z]/.test(password)) {
+            setError('Password Must contain two uppercase or at least one lowercase');
             return;
         }
 
@@ -66,11 +68,10 @@ const useFirebase = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
-                setError('');
+                setError(' ');
             })
-            .catch(error => {
-                setError(error.message);
+            .catch(() => {
+                setError('Email or Password do no match');
             })
     }
 
@@ -78,7 +79,6 @@ const useFirebase = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
                 setError('');
                 verifyEmail();
                 setUserName();
@@ -96,7 +96,6 @@ const useFirebase = () => {
     const verifyEmail = () => {
         sendEmailVerification(auth.currentUser)
             .then(result => {
-                console.log(result);
             })
     }
 
