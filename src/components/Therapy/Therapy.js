@@ -24,7 +24,6 @@ const Therapy = (props) => {
                     </Card.Body>
                 </Card>
             </Col>
-
         </div >
     );
 };
